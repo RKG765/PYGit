@@ -234,8 +234,8 @@ class Repository:
                 current[parts[-1]] = blob_hash
         
         def create_tree_recursive(entries_dict: Dict):
-                                                        <-----------
             pass
+                                                        #<-----------
         root_entries = {**files}
         for dir_name, dir_contents in dirs.items():
             root_entries[dir_name] = dir_contents
@@ -247,7 +247,7 @@ class Repository:
     def commit(self,message: str,author:str="PyGit User user@pygit.com",):
         # create a tree object from the index
         tree_hash = self.create_tree_from_index()
-        pass   <----
+        pass   #<----
                
         
 
@@ -292,7 +292,7 @@ def main():
                 print("Make a git repo first....")
                 return
             author = args.author or "PyGit user <user@pygit.com>"
-            repo.commit(args.message,author)    <--- create that function 
+            repo.commit(args.message,author)    #<--- create that function 
                    
             
             
